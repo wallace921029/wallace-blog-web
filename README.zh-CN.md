@@ -8,6 +8,8 @@
 
 一个具有复古未来主义黑客美学的现代个人博客平台。使用 React 19 构建，采用终端风格设计，配备 OLED 友好的深色主题、等宽字体和赛博朋克视觉元素。
 
+![screenshot](./src/assets/images/screenshot.png)
+
 ## ✨ 特性
 
 - 🎨 **黑客/终端主题** - 赛博朋克美学，发光绿色文字和高对比度
@@ -164,13 +166,16 @@ cover: "./cover.jpg"
 #### 🔄 更新文章
 
 **修改现有文章**
+
 1. 直接编辑挂载目录中的文章文件
 2. 刷新浏览器即可看到更新（无需重启容器）
 
 **添加新文章**
+
 1. 在挂载目录中创建新的文章文件夹
 2. 添加 `index.md` 文件
 3. 重启容器以重新生成索引：
+
    ```bash
    docker-compose restart
    # 或
@@ -233,9 +238,9 @@ docker-compose restart
 
 #### 🌐 访问地址
 
-- **本地访问**: http://localhost:3000
+- **本地访问**: <http://localhost:3000>
 - **局域网访问**: http://YOUR_IP:3000
-- **文章索引**: http://localhost:3000/articles/index.json
+- **文章索引**: <http://localhost:3000/articles/index.json>
 
 ## 📝 内容管理
 
@@ -256,7 +261,7 @@ cover: "./cover.png"
 文章内容...
 ```
 
-3. 将图片添加到同一文件夹并在 markdown 中引用
+1. 将图片添加到同一文件夹并在 markdown 中引用
 
 ### 目录结构
 

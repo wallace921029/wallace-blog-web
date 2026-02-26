@@ -8,6 +8,8 @@
 
 A modern personal blog platform with a retro-futuristic hacker aesthetic. Built with React 19 and featuring a terminal-inspired design with OLED-friendly dark theme, monospaced typography, and cyberpunk visual elements.
 
+![screenshot](./src/assets/images/screenshot.png)
+
 ## ✨ Features
 
 - 🎨 **Hacker/Terminal Theme** - Cyberpunk aesthetic with glowing green text and high contrast
@@ -164,13 +166,16 @@ cover: "./cover.jpg"
 #### 🔄 更新文章
 
 **修改现有文章**
+
 1. 直接编辑挂载目录中的文章文件
 2. 刷新浏览器即可看到更新（无需重启容器）
 
 **添加新文章**
+
 1. 在挂载目录中创建新的文章文件夹
 2. 添加 `index.md` 文件
 3. 重启容器以重新生成索引：
+
    ```bash
    docker-compose restart
    # 或
@@ -233,9 +238,9 @@ docker-compose restart
 
 #### 🌐 访问地址
 
-- **本地访问**: http://localhost:3000
+- **本地访问**: <http://localhost:3000>
 - **局域网访问**: http://YOUR_IP:3000
-- **文章索引**: http://localhost:3000/articles/index.json
+- **文章索引**: <http://localhost:3000/articles/index.json>
 
 ## 📝 Content Management
 
@@ -256,7 +261,7 @@ cover: "./cover.png"
 Your article content here...
 ```
 
-3. Add any images to the same folder and reference them in markdown
+1. Add any images to the same folder and reference them in markdown
 
 ### Directory Structure
 

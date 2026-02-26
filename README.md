@@ -120,31 +120,31 @@ docker run -d \
   wallace-blog-web:latest
 ```
 
-#### 📋 常用命令
+#### 📋 Common Commands
 
 ```bash
-# 查看日志
+# View logs
 docker logs -f wallace-blog
-# 或
+# or
 docker-compose logs -f
 
-# 停止容器
+# Stop container
 docker stop wallace-blog
-# 或
+# or
 docker-compose down
 
-# 重启容器
+# Restart container
 docker restart wallace-blog
-# 或
+# or
 docker-compose restart
 
-# 删除容器
+# Remove container
 docker rm wallace-blog
 ```
 
-#### 📁 文章目录结构
+#### 📁 Article Directory Structure
 
-挂载的文章目录必须遵循以下结构：
+The mounted article directory must follow this structure:
 
 ```
 articles/
@@ -162,98 +162,98 @@ articles/
         └── index.md
 ```
 
-每篇文章的 `index.md` 应包含 frontmatter：
+Each article's `index.md` should include frontmatter:
 
 ```markdown
 ---
-title: "文章标题"
+title: "Article Title"
 date: "2024-01-01"
-description: "文章描述"
+description: "Article description"
 tags: ["tag1", "tag2"]
 cover: "./cover.jpg"
 ---
 
-文章内容...
+Article content...
 ```
 
-#### 🔄 更新文章
+#### 🔄 Updating Articles
 
-**修改现有文章**
+**Editing Existing Articles**
 
-1. 直接编辑挂载目录中的文章文件
-2. 刷新浏览器即可看到更新（无需重启容器）
+1. Edit the article files directly in the mounted directory
+2. Refresh the browser to see updates (no container restart needed)
 
-**添加新文章**
+**Adding New Articles**
 
-1. 在挂载目录中创建新的文章文件夹
-2. 添加 `index.md` 文件
-3. 重启容器以重新生成索引：
+1. Create a new article folder in the mounted directory
+2. Add an `index.md` file
+3. Restart the container to regenerate the index:
 
    ```bash
    docker-compose restart
-   # 或
+   # or
    docker restart wallace-blog
    ```
 
-#### 🔍 故障排查
+#### 🔍 Troubleshooting
 
-**文章不显示**
+**Articles Not Showing**
 
 ```bash
-# 1. 检查 volume 是否正确挂载
+# 1. Check if the volume is correctly mounted
 docker exec wallace-blog ls -la /usr/share/nginx/html/articles
 
-# 2. 检查索引文件是否生成
+# 2. Check if the index file was generated
 docker exec wallace-blog cat /usr/share/nginx/html/articles/index.json
 
-# 3. 查看容器日志
+# 3. View container logs
 docker logs wallace-blog
 
-# 4. 重启容器
+# 4. Restart container
 docker restart wallace-blog
 ```
 
-**权限问题**
+**Permission Issues**
 
 ```bash
-# Linux/Mac: 确保目录可读
+# Linux/Mac: ensure directory is readable
 chmod -R 755 /path/to/articles
 ```
 
-**端口冲突**
+**Port Conflicts**
 
 ```bash
-# 使用不同端口
+# Use a different port
 docker run -d -p 8080:80 ...
 
-# 或修改 docker-compose.yml
+# or modify docker-compose.yml
 ports:
   - "8080:80"
 ```
 
-#### 🔐 安全建议
+#### 🔐 Security Recommendations
 
-- ✅ 使用只读挂载：始终使用 `:ro` 标志
-- ✅ 限制网络访问：使用防火墙规则
-- ✅ 定期更新镜像：保持基础镜像最新
-- ✅ 定期备份文章内容
+- ✅ Use read-only mounts: always use the `:ro` flag
+- ✅ Restrict network access: use firewall rules
+- ✅ Update images regularly: keep the base image up to date
+- ✅ Back up article content regularly
 
-#### 💾 备份
+#### 💾 Backup
 
 ```bash
-# 备份文章
+# Backup articles
 tar -czf articles-backup-$(date +%Y%m%d).tar.gz /path/to/articles
 
-# 恢复文章
+# Restore articles
 tar -xzf articles-backup-20240101.tar.gz -C /path/to/restore/
 docker-compose restart
 ```
 
-#### 🌐 访问地址
+#### 🌐 Access URLs
 
-- **本地访问**: <http://localhost:3000>
-- **局域网访问**: http://YOUR_IP:3000
-- **文章索引**: <http://localhost:3000/articles/index.json>
+- **Local**: <http://localhost:3000>
+- **LAN**: http://YOUR_IP:3000
+- **Article Index**: <http://localhost:3000/articles/index.json>
 
 ## 📝 Content Management
 

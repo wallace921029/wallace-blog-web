@@ -9,7 +9,7 @@ services:
     volumes:
       # Mount your articles directory here
       # Replace './src/articles' with your actual articles path
-      - ./src/articles:/usr/share/nginx/html/articles:ro
+      - ./articles:/usr/share/nginx/html/articles:ro
     restart: unless-stopped
     environment:
       - NODE_ENV=production

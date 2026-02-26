@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import avatar from "@/assets/images/avatar.jpg";
 import aboutConfig from "@/config/about.json";
 import siteConfig from "@/config/site.json";

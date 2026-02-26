@@ -73,9 +73,13 @@ export function Home() {
                   )}
                 </div>
                 
-                <div className="flex md:flex-col items-center md:items-end gap-2 text-xs text-muted-foreground font-mono shrink-0 md:text-right min-w-[120px]">
-                  <span className="text-primary text-base font-bold">{format(new Date(article.date), 'yyyy-MM-dd')}</span>
-                  <span className="uppercase font-bold tracking-wider border-b border-primary/30 pb-0.5">{article.category}</span>
+                <div className="flex w-full md:w-auto items-center justify-between md:flex-col md:items-end md:justify-end gap-2 text-xs text-muted-foreground font-mono shrink-0 md:text-right min-w-[160px]">
+                  <span className="text-primary text-sm md:text-base font-bold">
+                    {format(new Date(article.date), "yyyy-MM-dd")}
+                  </span>
+                  <span className="uppercase font-bold tracking-wider border-b border-primary/30 pb-0.5">
+                    {article.category}
+                  </span>
                 </div>
               </div>
             ))

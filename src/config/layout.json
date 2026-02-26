@@ -1,0 +1,17 @@
+{
+  "header": {
+    "logo": {
+      "prefix": "█",
+      "text": "WALLACE_BLOG"
+    },
+    "nav": {
+      "articles": "[ARTICLES]",
+      "about": "[ABOUT]"
+    }
+  },
+  "footer": {
+    "left": "SYSTEM_ID: W-NEXUS-v2.0",
+    "right": "// SECURE_CONNECTION"
+  }
+}
+

@@ -72,6 +72,19 @@ scp wallace-blog-web.tar user@your-server:/path/to/deploy/
 scp docker-compose.yml user@your-server:/path/to/deploy/
 ```
 
+#### ⚡ Quick Deploy with Script
+
+Transfer [`deploy.sh`](./deploy.sh) to your server alongside the tar file, then run:
+
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
+
+The script will automatically load the image, recreate the container, and clean up dangling images.
+
+> **Prerequisite**: `docker-compose.yml` must already exist on the server with the correct volume paths configured.
+
 #### 🚀 Step 3: Deploy on Server
 
 **Method 1: Docker Compose (Recommended)**

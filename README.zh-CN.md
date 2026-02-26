@@ -72,6 +72,19 @@ scp wallace-blog-web.tar user@your-server:/path/to/deploy/
 scp docker-compose.yml user@your-server:/path/to/deploy/
 ```
 
+#### ⚡ 使用脚本快速部署
+
+将 [`deploy.sh`](./deploy.sh) 与 tar 文件一起传输到服务器，然后执行：
+
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
+
+脚本会自动完成镜像加载、容器重建和悬空镜像清理。
+
+> **前置条件**：服务器上须已存在配置好 volumes 路径的 `docker-compose.yml`。
+
 #### 🚀 第三步：在服务器上部署
 
 **方式 1: 使用 Docker Compose（推荐）**

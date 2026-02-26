@@ -1,0 +1,14 @@
+{
+  "terminal": {
+    "text": "> Initializing Wallace Blog System...\n> Loading modules...\n> Access granted.\n> Welcome, User.",
+    "typingSpeed": 50
+  },
+  "latestPosts": {
+    "title": "LATEST_POSTS",
+    "maxPosts": 3,
+    "excludeCategories": ["Archive"],
+    "viewAllText": "[VIEW_ALL_ARCHIVES]",
+    "viewAllLink": "/articles",
+    "emptyMessage": "No articles found."
+  }
+}

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  wallace-blog:
+    image: wallace-blog-web:latest
+    container_name: wallace-blog-web
+    ports:
+      - "3000:80"
+    volumes:
+      # Mount your articles directory here
+      # Replace './src/articles' with your actual articles path
+      - ./src/articles:/usr/share/nginx/html/articles:ro
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production

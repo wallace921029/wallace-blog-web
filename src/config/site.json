@@ -1,0 +1,13 @@
+{
+  "title": {
+    "default": "The Uncharted",
+    "home": "The Uncharted - Home",
+    "about": "About - The Uncharted",
+    "articles": "Articles - The Uncharted",
+    "articleDetail": "{title} - The Uncharted"
+  },
+  "meta": {
+    "description": "Wallace's personal blog - exploring code, ideas, and life",
+    "keywords": "blog, tech, development, wallace"
+  }
+}

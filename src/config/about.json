@@ -1,0 +1,42 @@
+{
+    "profile": {
+        "name": "Wallace",
+        "title": "FULL_STACK_DEVELOPER",
+        "level": "LEVEL_99",
+        "avatar": "/src/assets/images/avatar.jpg",
+        "stats": {
+            "gender": "MALE",
+            "location": "EARTH_616",
+            "status": "ONLINE",
+            "uptime": "99.9%"
+        }
+    },
+    "bio": {
+        "description": "A passionate Full Stack Developer crafting digital experiences with code. Obsessed with clean architecture, performance optimization, and pixel-perfect UIs. Currently exploring the boundaries of AI and Web Development."
+    },
+    "skills": {
+        "frontend": [
+            "React",
+            "TypeScript",
+            "Tailwind",
+            "Next.js",
+            "Vue"
+        ],
+        "backend": [
+            "Node.js",
+            "Python",
+            "Go",
+            "PostgreSQL",
+            "Docker"
+        ]
+    },
+    "friendLinks": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/wallace921029",
+            "icon": "GH",
+            "description": "Where the code lives. Explore open source projects.",
+            "color": null
+        }
+    ]
+}
